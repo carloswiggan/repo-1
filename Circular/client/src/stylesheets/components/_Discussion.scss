@@ -1,0 +1,112 @@
+.discussion {
+  background: $mainwhite;
+  border-radius: 4px;
+  font-size: 14px;
+  // min-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  color: $main-blue;
+  margin-bottom: 1rem;
+  padding-bottom: 1em;
+
+  .main-post-box {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .login-post-box.well {
+    margin-top: 1.5em;
+    margin-bottom: 0;
+  }
+
+  @media #{$information-phone} {
+    width: 100%;
+    padding: 10px 15px 5px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .discussion-header {
+    font-size: 22px;
+    text-align: center;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    min-height: 2em;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+  }
+
+  button {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-size: 12px;
+    -webkit-appearance: none;
+    outline: none;
+  }
+}
+
+.post-box-shared {
+  border: 2px solid $light-gray;
+  border-radius: 3px;
+
+  .text-area-wrapper {
+    color: #2a2e2e;
+    cursor: text;
+    display: block;
+    height: auto;
+    line-height: 1.4;
+    margin: 0;
+    max-height: 360px;
+    overflow-y: scroll;
+    padding: 10px;
+    // overflow: auto;
+    resize: none;
+    width: 100%;
+    word-wrap: break-word;
+
+    .post-box-message[placeholder]:empty::before {
+      content: attr(placeholder);
+      opacity: 0.5;
+      color: inherit;
+      cursor: text;
+    }
+
+    .post-box-message {
+      font-family: 'Inter UI', sans-serif;
+      transition: all 0.2s ease-in-out;
+
+      &:focus {
+        -webkit-appearance: none;
+        outline: none;
+      }
+    }
+  }
+
+  .post-options {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 120px 120px;
+    border-top: 2px solid $light-gray;
+
+    button {
+      padding: 8px;
+
+      &:focus {
+        background-color: $light-gray;
+      }
+    }
+
+    .post-comment-button {
+      display: block;
+      border-left: 2px solid $light-gray;
+      grid-column-end: -1;
+    }
+
+    .cancel-post {
+      border-left: 2px solid $light-gray;
+      color: red;
+    }
+  }
+}

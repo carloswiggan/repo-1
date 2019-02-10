@@ -1,0 +1,105 @@
+@import "../base/colors";
+
+.loading-spinner {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: $mainwhite;
+  color: transparent;
+}
+
+.slow-spin {
+  animation: fa-spin 4s infinite linear;
+}
+
+.loader {
+  display: block;
+  text-align: center;
+
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 500;
+  color: $mainwhite;
+
+  &.hide {
+    display: none;
+  }
+
+  h1 {
+    padding: 100px;
+    font-size: 2em;
+
+    @media #{$information-phone} {
+      padding: 50px;
+      font-size: 1em;
+    }
+  }
+}
+
+.new-address-heading {
+  font-size: 1.5em;
+}
+
+.new-address-sub-heading {
+  color: $mainwhite;
+  font-size: 1em;
+}
+
+.nearby-address-item {
+  color: $mainwhite;
+
+  input {
+    display: none;
+
+    &:checked .control-label .nearby-address-info {
+      background-color: $green-color;
+    }
+  }
+
+  .control-label {
+    height: 100%;
+    color: $mainwhite;
+
+    i {
+      text-align: left;
+      font-size: 20px;
+    }
+    .nearby-address-info {
+      margin-bottom: 5px;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+    &:hover .nearby-address-info {
+      background-color: $green-color;
+    }
+  }
+
+  .fa-check-circle-o {
+    color: $green-color;
+  }
+  .fa-circle-thin:before,
+  .fa:before {
+    /*
+     vertical-align: middle was not working no matter where I put it so I used this janky solution to stop being  blocked
+    */
+    position: absolute;
+    top: 25%;
+  }
+}
+
+.nearby-address-info {
+  padding: 7px 5px;
+}
+
+.join-campaign-button {
+  background-color: $green-color; // override bootstrap .btn background-color
+  &:hover {
+    background-color: darken($green-color, 5%);
+    color: inherit;
+  }
+  &:active {
+    background-color: darken($green-color, 10%);
+    color: inherit;
+  }
+  &:focus {
+    color: inherit;
+  }
+}

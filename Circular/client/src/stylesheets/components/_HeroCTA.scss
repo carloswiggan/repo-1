@@ -1,0 +1,112 @@
+@import "../utils/placeholders";
+@import "../base/colors";
+
+.hero-page-header {
+  text-align: center;
+  color: $mainwhite;
+
+  h1 {
+    font-size: 60px;
+    letter-spacing: 3px;
+    text-shadow: 30px 30px 30px 30px #000;
+    margin: 15px 15px;
+  }
+
+  h2,
+  h3 {
+    @include font($display_stack, 30px, 200);
+    line-height: 1.2em;
+    margin: 10px 0;
+  }
+
+  .font-italic {
+    @include font('Dancing Script', 50px, regular);
+  }
+
+  @media #{$information-phone} {
+    font-size: 32px;
+  }
+}
+.hero-wrapper {
+  position: relative;
+  height: 100%;
+  background-image: url($desktop-hero-image);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  background-attachment: fixed;
+
+  .opacity-div {
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 5rem 12%;
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media #{$information-phone} {
+    background-image: url($mobile-hero-image);
+  }
+}
+.hero-search {
+  padding-top: 0px;
+  margin-top: -3em;
+
+  .map-btn {
+    color: $mainwhite;
+    &:hover {
+      color: $hovergreen;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .hero-wrapper {
+    .opacity-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 0 50px 0;
+    }
+  }
+
+  .hero-page-header {
+    h1 {
+      font-size: 48px;
+    }
+
+    .font-italic {
+      @include font('Dancing Script', 48px, regular);
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-page-header {
+    h1 {
+      font-size: 32px;
+    }
+
+    .font-italic {
+      @include font('Dancing Script', 32px, regular);
+    }
+
+    h2 {
+      font-size: 28px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+  }
+}
+.who-we-are-footer {
+  background-color: red;
+
+}

@@ -1,0 +1,31 @@
+{
+  "name": "denver-reimagine",
+  "scripts": {},
+  "env": {
+    "COOKIE_KEY": {
+      "required": true
+    },
+    "GOOGLE_CLIENT_ID": {
+      "required": true
+    },
+    "GOOGLE_CLIENT_SECRET": {
+      "required": true
+    },
+    "FACEBOOK_APP_ID": {
+      "required": true
+    },
+    "FACEBOOK_APP_SECRET": {
+      "required": true
+    },
+    "REACT_APP_GOOGLE_MAPS_KEY": {
+      "required": true
+    }
+  },
+  "formation": {},
+  "addons": ["mongolab", "papertrail"],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

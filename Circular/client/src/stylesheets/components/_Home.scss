@@ -1,0 +1,105 @@
+@import '../base/colors';
+
+.home-section-title {
+  margin-top: 10px;
+  padding-bottom: 7px;
+}
+
+.home-section-description {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  padding-bottom: 7px;
+}
+
+.home-section-page-header {
+  color: $mainwhite;
+  border-bottom: none;
+  margin-bottom: 5px;
+
+  h1 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+}
+
+.home-section-link {
+  display: inline-block;
+  color: $mainwhite;
+  padding-top: 1em;
+  &:hover {
+    color: $hovergreen;
+    text-decoration: none;
+  }
+}
+
+.info-and-links-wrapper {
+  display: flex;
+}
+
+.vertical-line {
+  background-color: $mainwhite;
+  height: 250px;
+  align-self: center;
+  width: 1px;
+}
+
+.recycling-info-wrapper,
+.property-manager-links-wrapper {
+  padding-bottom: 2em;
+  margin: 0;
+
+  .home-section-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
+    padding: 0 20px;
+
+    &.recycling-info-div {
+      border-right: 1px solid black;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .info-and-links-wrapper {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .recycling-info-wrapper,
+  .property-manager-links-wrapper {
+    padding: 0 0 2em 0;
+    .home-section-div {
+      min-height: 0px;
+      padding: 0 5px;
+    }
+  }
+}
+
+.how-it-works-banner {
+  background: $light-gray;
+}
+
+.banner-content {
+  > div {
+    @include display-24-thin;
+    color: #164c5f;
+    text-align: center;
+  }
+
+  > div:first-child {
+    margin-bottom: 0.5rem;
+    @include display-24-reg;
+    color: #164c5f;
+  }
+}
+
+
+
+  
+

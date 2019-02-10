@@ -1,0 +1,62 @@
+.container-fluid {
+  padding: 0;
+}
+
+.navbar {
+  background-color: $dark-blue;
+  color: $mainwhite;
+  border: none;
+  border-radius: 0;
+  margin-bottom: 0;
+
+  .dropdown-toggle,
+  .dropdown-menu {
+    background-color: $dark-blue;
+  }
+
+  .navbar-nav li a {
+    color: $mainwhite;
+    cursor: pointer;
+    &:hover {
+      color: $hovergreen;
+      background-color: $dark-blue;
+      text-decoration: none;
+    }
+    a {
+      color: inherit;
+    }
+  }
+
+  .navbar-brand {
+    color: $mainwhite;
+    padding-left: 30px;
+    &:hover {
+      color: $hovergreen;
+    }
+  }
+  .navbar-toggle {
+    border: 1px solid $mainwhite;
+    &:hover {
+      border: 1px solid $hovergreen;
+      .icon-bar {
+        background-color: $hovergreen;
+      }
+    }
+    .icon-bar {
+      background-color: $mainwhite;
+    }
+  }
+}
+
+.nav .open > a, 
+.nav .open > a:hover, 
+.nav .open > a:focus {
+  color: $hovergreen;
+  background-color: $dark-blue;
+}
+
+.dropdown.open .dropdown-toggle a,
+.dropdown.open .dropdown-toggle a:hover,
+.dropdown.open .dropdown-toggle a:focus {
+  background-color: $dark-blue;
+}

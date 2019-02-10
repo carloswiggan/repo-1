@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Oswald:200,300,400,500|Dancing+Script");
+
+//Fallbacks for our two typefaces.
+$display_stack: "Oswald", Impact, "Franklin Gothic Bold", sans-serif;
+$body_stack: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+
+@mixin font ($fontFamily, $fontSize, $fontWeight) {
+  font-family: $fontFamily;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  color: $mainwhite;
+}
+
+
+@mixin display-72-med () {
+  @include font($display_stack, 72px, 500);
+  line-height: normal;
+}
+
+@mixin display-48-med () {
+  @include font($display_stack, 48px, 500);
+  line-height: normal;
+}
+
+@mixin display-48-thin () {
+  @include font($display_stack, 48px, 300);
+  line-height: normal;
+}
+
+@mixin display-36-thin () {
+  @include font($display_stack, 36px, 300);
+  line-height: normal;
+}
+
+@mixin display-36-med () {
+  @include font($display_stack, 36px, 500);
+  line-height: normal;
+}
+
+@mixin display-32-thin () {
+  @include font($display_stack, 32px, 300);
+  line-height: normal;
+}
+
+@mixin display-28-med () {
+  @include font($display_stack, 28px, 500);
+  line-height: 1.25;
+}
+
+@mixin display-24-med () {
+  @include font($display_stack, 24px, 500);
+  line-height: 1.25;
+}
+
+@mixin display-24-reg () {
+  @include font($display_stack, 24px, 400);
+  line-height: 1.25;
+}
+
+@mixin display-24-thin () {
+  @include font($display_stack, 24px, 300);
+  line-height: 1.25;
+}
+
+@mixin display-20-reg () {
+  @include font($display_stack, 20px, 400);
+  line-height: 1.33;
+}
+
+@mixin display-20-thin () {
+  @include font($display_stack, 20px, 300);
+  line-height: 1.33;
+}
+
+@mixin body-16-semibold-tt () {
+  @include font($body_stack, 16px, 600);
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+@mixin body-16 () {
+  @include font($body_stack, 16px, 400);
+  line-height: 1.5;
+}
+
+@mixin body-14 () {
+  @include font($body_stack, 14px, 400);
+  line-height: 1.5;
+  letter-spacing: 0.2px;
+}
+
+@mixin body-12 () {
+  @include font($body_stack, 12px, 400);
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}

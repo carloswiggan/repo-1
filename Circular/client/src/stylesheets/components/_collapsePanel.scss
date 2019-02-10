@@ -1,0 +1,37 @@
+@import '../base/colors';
+
+.collapse-panel {
+  margin-bottom: 2em;
+  border: none;
+
+  a {
+    text-decoration: none;
+  }
+
+  .collapse-panel-toggle {
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  .collapse-panel-title {
+    font-size: 20px;
+    color: $mainwhite;
+    a {
+      color: $mainwhite;
+    }
+
+    i {
+      line-height: 30px;
+    }
+  }
+
+  ol,
+  ul {
+    list-style-position: inside;
+  }
+
+  ul {
+    list-style-type: square;
+  }
+}

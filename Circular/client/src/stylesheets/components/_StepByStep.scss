@@ -1,0 +1,113 @@
+@import "../utils/placeholders";
+@import "../base/colors";
+
+.step-by-step-container {
+  margin-bottom: 6rem;
+
+  &.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h2.home-section-title {
+    padding: 0 0;
+    margin-top: 6rem;
+    text-align: center;
+    @include display-24-med;
+  }
+
+  .tinted {
+    background-color: rgba(255,255,255,0.25);
+  }
+
+  .pad-bottom {
+    padding-bottom: 6rem;
+  }
+
+  .inner-content-container {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > div:first-child {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 800px;
+      padding: 0 0.5rem;
+      margin-top: 2rem;
+    }
+
+    a.more-step-details-link {
+      color: $maingreen;
+      opacity: 0.7;
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    a.more-step-details-link:hover {
+      color: $hovergreen;
+      opacity: 1;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    p:first-child {
+      margin-top: 0.7rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  .step-by-step-container {
+  
+    .inner-content-container {
+      padding: 0 1rem;
+
+      a.more-step-details-link {
+        align-self: flex-end;
+      }
+
+      p:first-child {
+        margin-top: 1rem;
+      }
+    }
+
+    h2.home-section-title {
+      text-align: left;
+      @include display-28-med;
+      margin-left: 1rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .step-by-step-container {
+    .inner-content-container {
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .step-by-step-container {
+    .inner-content-container {
+      padding: 0 1rem;
+
+      a.more-step-details-link {
+        align-self: flex-end;
+      }
+
+      p {
+        align-self: center;
+      }
+    }
+  }
+}

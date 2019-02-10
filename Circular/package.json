@@ -1,0 +1,65 @@
+{
+  "name": "Denver-ReImagine",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.3.0",
+    "yarn": ">=1.2"
+  },
+  "scripts": {
+    "client": "(cd ./client && yarn start)",
+    "cypress": "cypress",
+    "ci:start-app-for-test": "concurrently \"yarn client\" \"serve client/build 3000\"",
+    "ci:test": "cypress run",
+    "lint": "eslint .",
+    "dev": "concurrently \"yarn client\"",
+    "test-dev": "cross-env NODE_ENV=test yarn dev",
+    "client-install": "(cd ./client && yarn install)",
+    "client-build": "(cd ./client && yarn run build)",
+    "heroku-postbuild": "YARN_PRODUCTION=false yarn run client-install && yarn run client-build",
+    "postinstall": "yarn install --cwd client",
+    "lint-client": "yarn prettier-eslint client/src/**/*.js --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json}": [
+      "prettier-eslint --write",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.5.0",
+    "body-parser": "^1.18.2",
+    "concurrently": "^3.5.1",
+    "cookie-session": "^2.0.0-beta.3",
+    "nodemon": "^1.12.1",
+    "path-parser": "^2.0.2",
+    "react-bootstrap": "^0.32.1",
+    "serve": "^10.1.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "cross-env": "^5.1.1",
+    "cypress": "^3.0.3",
+    "cypress-testing-library": "^2.0.0",
+    "eslint": "^4.12.1",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-node": "4.2.2",
+    "eslint-plugin-react": "^7.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.10.0",
+    "prettier-eslint": "^8.2.2",
+    "prettier-eslint-cli": "^4.4.0"
+  },
+  "resolutions": {
+    "**/event-stream": "^4.0.1"
+  }
+}
