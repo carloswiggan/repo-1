@@ -7,7 +7,7 @@
     "yarn": ">=1.2"
   },
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "classnames": "^2.2.5",
     "css-loader": "^0.28.4",
     "dateformat": "^3.0.3",
